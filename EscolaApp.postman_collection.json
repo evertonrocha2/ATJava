@@ -1,0 +1,163 @@
+{
+	"info": {
+		"_postman_id": "10d95395-6207-4757-ab9a-c99e10e30dbb",
+		"name": "EscolaApp",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33298583"
+	},
+	"item": [
+		{
+			"name": "Listar todos professores",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n \"nome\": \"Everton\",\r\n \"idade\": 21,\r\n \"matricula\": \"505050\",\r\n \"turma\":{\r\n    \"codigo\": 101\r\n },\r\n \"endereco\":{\r\n \"cep\": \"23017390\"\r\n },\r\n \"escola\":{\r\n    \"nome\": \"Infnet\"\r\n }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/professor/lista",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"professor",
+						"lista"
+					]
+				},
+				"description": "Listagem de professores"
+			},
+			"response": []
+		},
+		{
+			"name": "Adicionar professor",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n \"nome\": \"Everton\",\r\n \"idade\": 21,\r\n \"turma\":{\r\n    \"codigo\": 101\r\n },\r\n \"endereco\":{\r\n \"cep\": \"23017390\"\r\n },\r\n \"escola\":{\r\n    \"nome\": \"Infnet\"\r\n }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/professor/incluir",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"professor",
+						"incluir"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar todos os alunos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/aluno/lista",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"aluno",
+						"lista"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Adicionar aluno",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n \"nome\": \"Everton\",\r\n \"idade\": 21,\r\n \"matricula\": \"1020304050\",\r\n \"nota\": 10,\r\n \"turma\":{\r\n    \"codigo\": 101\r\n },\r\n \"endereco\":{\r\n \"cep\": \"23017390\"\r\n },\r\n \"escola\":{\r\n    \"nome\": \"Infnet\"\r\n }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/aluno/incluir",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"aluno",
+						"incluir"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Deletar um aluno por ID",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/aluno/1/excluir",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"aluno",
+						"1",
+						"excluir"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Excluir professor por ID",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/professor/1/excluir",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"professor",
+						"1",
+						"excluir"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
