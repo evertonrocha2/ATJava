@@ -1,8 +1,8 @@
 package escolaApp.model.domain;
 
-public class Professor{
-    private Integer id;
-    private String nome;
+public class Professor extends Pessoa{
+//    private Integer id;
+//    private String nome;
     private int idade;
     private Endereco endereco;
     private Turma turma;
